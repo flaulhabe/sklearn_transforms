@@ -16,7 +16,8 @@ class DropColumns(BaseEstimator, TransformerMixin):
         return data.drop(labels=self.columns, axis='columns')
     
 
- class DataFrameImputer(TransformerMixin):
+class DataFrameImputer(TransformerMixin):
+
     def __init__(self):
         """ Colunas no formato dtype são substituídas pelo valor mais frequente na coluna
             Colunas de outros tipos são substituídas com a média dos valores da coluna
